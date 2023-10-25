@@ -13,12 +13,10 @@ terraform {
 }
 
 provider "hcp" {
-  # Configuration options
   project_id = var.hcp_project_uuid
 }
 
 provider "tfe" {
-  # Configuration options
   token        = data.hcp_vault_secrets_app.tfc_credentials.secrets["TFE_TOKEN"]
   organization = var.tfc_organization
 }
