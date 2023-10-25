@@ -23,16 +23,6 @@ provider "tfe" {
   organization = var.tfc_organization
 }
 
-variable "hcp_project_uuid" {
-  description = "The default HCP project UUID that resources should belong to."
-  type        = string
-}
-
-variable "tfc_organization" {
-  description = "The default TFC organization that resources should belong to."
-  type        = string
-}
-
 data "hcp_vault_secrets_secret" "tfc_credentials" {
   app_name    = "TFC--hashi-nils-org"
   secret_name = "TFE_TOKEN"
