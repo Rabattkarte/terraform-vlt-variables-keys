@@ -19,7 +19,7 @@ provider "hcp" {
 
 provider "tfe" {
   # Configuration options
-  token        = data.hcp_vault_secrets_app.tfc_credentials.secret["TFE_TOKEN"]
+  token        = data.hcp_vault_secrets_app.tfc_credentials.secrets["TFE_TOKEN"]
   organization = var.tfc_organization
 }
 
