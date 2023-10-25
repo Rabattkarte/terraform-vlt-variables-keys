@@ -14,3 +14,9 @@ variable "vlt_app_for_azure_credentials" {
   type = string
   default = "doormat-credentials-azure"
 }
+
+variable "vlt_app_for_tfc_credentials" {
+  description = "The HCP Vault Secrets app holding all TFC credentials."
+  type = string
+  default = "TFC--hashi-nils-org"
+}
