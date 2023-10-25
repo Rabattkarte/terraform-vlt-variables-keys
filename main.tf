@@ -28,8 +28,8 @@ data "hcp_vault_secrets_secret" "tfc_credentials" {
   secret_name = "TFE_TOKEN"
 }
 
-data "hcp_vault_secrets_app" "doormat_credentials" {
-  app_name = "doormat-credentials-azure"
+data "hcp_vault_secrets_app" "doormat_credentials_azure" {
+  app_name = var.vlt_app_for_azure_credentials
 }
 
 resource "tfe_variable_set" "azure" {
@@ -39,10 +39,10 @@ resource "tfe_variable_set" "azure" {
 }
 
 resource "tfe_variable" "azure_vars" {
-  for_each = nonsensitive(data.hcp_vault_secrets_app.doormat_credentials.secrets)
+  for_each = nonsensitive(data.hcp_vault_secrets_app.doormat_credentials_azure.secrets)
 
   key             = each.key
-  value           = data.hcp_vault_secrets_app.doormat_credentials.secrets[each.key]
+  value           = data.hcp_vault_secrets_app.doormat_credentials_azure.secrets[each.key]
   category        = "env"
   sensitive       = true
   variable_set_id = tfe_variable_set.azure.id
