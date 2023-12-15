@@ -15,7 +15,7 @@ data "hcp_vault_secrets_app" "vlt_app" {
 
 resource "tfe_variable_set" "credentials" {
   name        = "[AUTOMATION] ${var.human_name}"
-  description = "The variables in this set are for ${var.human_name}. They are synced from HCP Vault Secrets and managed through a TFC workspace."
+  description = "The variables in this set are for '${var.human_name}'. They are synced from HCP Vault Secrets and managed through a TFC workspace."
   global      = true
 }
 
