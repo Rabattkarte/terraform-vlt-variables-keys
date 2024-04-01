@@ -1,6 +1,6 @@
-# vlt-azure-access
+# terraform-vlt-variables-keys
 
-Sync HCP Vault Secrets Apps to sensitive Variable Sets in Terraform Cloud to enable access to clouds, APIs, etc.
+Sync [HCP Vault Secrets](https://developer.hashicorp.com/hcp/docs/vault-secrets) Apps to sensitive Variable Sets in Terraform Cloud to enable access to clouds, APIs, etc.
 
 ---
 
