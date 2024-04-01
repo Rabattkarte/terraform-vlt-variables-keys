@@ -12,3 +12,13 @@ variable "vlt_app_for_tfc_credentials" {
   description = "The HCP Vault Secrets app holding all Terraform Cloud credentials."
   type        = string
 }
+
+variable "vlt_app_for_azure_credentials" {
+  description = "The HCP Vault Secrets app holding all Azure credentials."
+  type        = string
+}
+
+variable "vlt_app_for_github_credentials" {
+  description = "The HCP Vault Secrets app holding all GitHub credentials."
+  type        = string
+}

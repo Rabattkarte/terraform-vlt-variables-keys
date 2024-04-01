@@ -29,7 +29,7 @@ module "azure" {
   source = "./vlt_sync"
 
   human_name = "Azure Access"
-  vlt_app    = "doormat-credentials-azure"
+  vlt_app    = var.vlt_app_for_azure_credentials
 }
 
 module "tfc" {
@@ -43,5 +43,5 @@ module "github" {
   source = "./vlt_sync"
 
   human_name = "GitHub Access"
-  vlt_app    = "github"
+  vlt_app    = var.vlt_app_for_github_credentials
 }

@@ -37,6 +37,8 @@ Sync HCP Vault Secrets Apps to sensitive Variable Sets in Terraform Cloud to ena
 |------|-------------|------|---------|:--------:|
 | <a name="input_hcp_project_uuid"></a> [hcp\_project\_uuid](#input\_hcp\_project\_uuid) | The default HCP project UUID that resources should belong to. | `string` | n/a | yes |
 | <a name="input_tfc_organization"></a> [tfc\_organization](#input\_tfc\_organization) | The default TFC organization that resources should belong to. | `string` | n/a | yes |
+| <a name="input_vlt_app_for_azure_credentials"></a> [vlt\_app\_for\_azure\_credentials](#input\_vlt\_app\_for\_azure\_credentials) | The HCP Vault Secrets app holding all Azure credentials. | `string` | n/a | yes |
+| <a name="input_vlt_app_for_github_credentials"></a> [vlt\_app\_for\_github\_credentials](#input\_vlt\_app\_for\_github\_credentials) | The HCP Vault Secrets app holding all GitHub credentials. | `string` | n/a | yes |
 | <a name="input_vlt_app_for_tfc_credentials"></a> [vlt\_app\_for\_tfc\_credentials](#input\_vlt\_app\_for\_tfc\_credentials) | The HCP Vault Secrets app holding all Terraform Cloud credentials. | `string` | n/a | yes |
 
 ## Outputs
